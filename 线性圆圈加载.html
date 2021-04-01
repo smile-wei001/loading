@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: skyblue;
+        }
+        
+        .load {
+            font-size: 15px;
+            width: 1em;
+            height: 1em;
+            border-radius: 50%;
+            margin: 150px auto;
+            animation: loading 1s infinite linear;
+        }
+        
+        @keyframes loading {
+            /*  x偏移量 | y偏移量 | 阴影模糊半径 | 阴影扩散半径 | 阴影颜色  */
+            0% {
+                box-shadow: -3em 2em 0 0em #FFF, 0 2em 0 -.5em#FFF, 3em 2em 0 0 #FFF;
+            }
+            25% {
+                box-shadow: -3em 2em 0 -.5em #FFF, 0 2em 0 0em #FFF, 3em 2em 0 .5em #FFFF;
+            }
+            50% {
+                box-shadow: -3em 2em 0 0em #FFF, 0 2em 0 .5em#FFF, 3em 2em 0 0m #FFF;
+            }
+            75% {
+                box-shadow: -3em 2em 0 .5em #FFF, 0 2em 0 0em #FFF, 3em 2em 0 -.5em #FFF;
+            }
+            100% {
+                box-shadow: -3em 2em 0 0em #FFF, 0 2em 0 -.5em #FFF, 3em 2em 0 0 #FFF;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="load"></div>
+
+</body>
+
+</html>

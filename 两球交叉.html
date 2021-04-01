@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .loader {
+            height: 100px;
+            width: 100px;
+            margin: 150px auto;
+            position: relative;
+        }
+        
+        .loader:before {
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            background-color: skyblue;
+            content: "";
+            position: absolute;
+            animation: loader_before 1.5s infinite ease-in-out;
+        }
+        
+        .loader:after {
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            background-color: pink;
+            content: "";
+            position: absolute;
+            left: 40px;
+            animation: loader_after 1.5s infinite ease-in-out;
+        }
+        
+        @keyframes loader_before {
+            0% {
+                transform: translateX(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateX(40px);
+            }
+            100% {
+                transform: translateX(0px) rotate(0deg);
+            }
+        }
+        
+        @keyframes loader_after {
+            0% {
+                transform: translateX(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateX(-40px);
+            }
+            100% {
+                transform: translateX(0px) rotate(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader"></div>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: skyblue;
+        }
+        
+        .load {
+            margin: 150px auto;
+            font-size: 20px;
+            width: 1em;
+            height: 1em;
+            border-radius: 50%;
+            text-indent: -9999em;
+            animation: loading 2s infinite linear;
+        }
+        
+        @keyframes loading {
+            /* x偏移量 | y偏移量 | 阴影模糊半径 | 阴影扩散半径 | 阴影颜色 */
+            /* 3em:右移3em;
+            -3em:下移3em
+          0:模糊距离0，即纯色
+          .2em:外扩.2em
+          #FFF:白色
+         */
+            0% {
+                box-shadow: 0 -3em 0 .2em #FFF, /*上*/
+                2em -2em 0 0 #FFF, /*右上*/
+                3em 0 0 -.5em #FFF, /*右*/
+                2em 2em 0 -.5em #FFF, /*右下*/
+                0 3em 0 -.5em #FFF, /*下*/
+                -2em 2em 0 -.5em #FFF, /*左下*/
+                -3em 0 0 -.5em #FFF, /*左*/
+                -2em -2em 0 0 #FFF;
+                /*左上*/
+            }
+            12.5% {
+                box-shadow: 0 -3em 0 0em #FFF, 2em -2em 0 .2em #FFF, 3em 0 0 0em #FFF, 2em 2em 0 -.5em #FFF, 0 3em 0 -.5em #FFF, -2em 2em 0 -.5em #FFF, -3em 0 0 -.5em #FFF, -2em -2em 0 -.5em #FFF;
+            }
+            25% {
+                box-shadow: 0 -3em 0 -.5em #FFF, 2em -2em 0 0em #FFF, 3em 0 0 .2em #FFF, 2em 2em 0 0em #FFF, 0 3em 0 -.5em #FFF, -2em 2em 0 -.5em #FFF, -3em 0 0 -.5em #FFF, -2em -2em 0 -.5em #FFF;
+            }
+            37.5% {
+                box-shadow: 0 -3em 0 -.5em #FFF, 2em -2em 0 -.5em #FFF, 3em 0 0 0em #FFF, 2em 2em 0 .2em #FFF, 0 3em 0 0em #FFF, -2em 2em 0 -.5em #FFF, -3em 0 0 -.5em #FFF, -2em -2em 0 -.5em #FFF;
+            }
+            50% {
+                box-shadow: 0 -3em 0 -.5em #FFF, 2em -2em 0 -.5em #FFF, 3em 0 0 -.5em #FFF, 2em 2em 0 0em #FFF, 0 3em 0 .2em #FFF, -2em 2em 0 0em #FFF, -3em 0 0 -.5em #FFF, -2em -2em 0 -.5em #FFF;
+            }
+            62.5% {
+                box-shadow: 0 -3em 0 -.5em #FFF, 2em -2em 0 -.5em #FFF, 3em 0 0 -.5em #FFF, 2em 2em 0 -.5em #FFF, 0 3em 0 0em #FFF, -2em 2em 0 .2em #FFF, -3em 0 0 0em #FFF, -2em -2em 0 -.5em #FFF;
+            }
+            75% {
+                box-shadow: 0 -3em 0 -.5em #FFF, 2em -2em 0 -.5em #FFF, 3em 0 0 -.5em #FFF, 2em 2em 0 -.5em #FFF, 0 3em 0 -.5em #FFF, -2em 2em 0 0em #FFF, -3em 0 0 .2em #FFF, -2em -2em 0 0em #FFF;
+            }
+            87.5% {
+                box-shadow: 0 -3em 0 0em #FFF, 2em -2em 0 -.5em #FFF, 3em 0 0 -.5em #FFF, 2em 2em 0 -.5em #FFF, 0 3em 0 -.5em #FFF, -2em 2em 0 -.5em #FFF, -3em 0 0 0em #FFF, -2em -2em 0 .2em #FFF;
+            }
+            100% {
+                box-shadow: 0 -3em 0 .2em #FFF, 2em -2em 0 0 #FFF, 3em 0 0 -.5em #FFF, 2em 2em 0 -.5em #FFF, 0 3em 0 -.5em #FFF, -2em 2em 0 -.5em #FFF, -3em 0 0 -.5em #FFF, -2em -2em 0 0 #FFF;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="load"></div>
+</body>
+
+</html>
